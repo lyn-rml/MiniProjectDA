@@ -1,35 +1,3 @@
-
-# Image de départ
-#FROM alpine:3.20
-
-# Répertoire de travail
-#WORKDIR /app
-
-# Installation des paquets système
-#RUN apk add --no-cache nodejs npm
-
-# Création de l'utilisateur et du groupe node
-#RUN addgroup -S node && \
-#    adduser -S -G node node && \
- #   chown node:node /app
-
-# Réduction des privilèges
-#USER node
-
-# Copie des fichiers du projet
-#COPY --chown=node:node . .
-
-# Installation des dépendances
-#RUN npm ci
-
-# Compilation TypeScript
-#RUN npm run build
-
-# Exécution de l'application
-#CMD ["npm", "start"]
-
-#---------
-
 # Stage 1 : compilation
 FROM alpine:3.20 AS builder
 
